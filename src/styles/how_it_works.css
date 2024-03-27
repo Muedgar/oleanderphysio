@@ -21,4 +21,46 @@
     height: 20%;
     z-index: 40;
 }
+/*
+'w-full h-[150px] flex justify-center relative'
+*/
+#advantages {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+
+@media (max-width: 1000px) {
+    #advantages {
+        width: 100%;
+        display: flex;
+        height: fit-content;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+    }    
+    #advantages p {
+        width: 90%;
+        text-align: start;
+    }
+    #advantages div {
+        width: 90%;
+    }
+    #advantages_list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 90%;
+    }
+    #advantages_list div:nth-child(2) {
+        width: 90%;
+    }
+}
 

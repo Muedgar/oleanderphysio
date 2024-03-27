@@ -8,10 +8,13 @@ import doc from '../assets/doc_eric.png'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
+import { faCalendar, faCalendarDays, faClock, faEnvelope, faLifeRing, faPlayCircle } from '@fortawesome/free-regular-svg-icons';
 
 import hallway from "../assets/hallway_2.avif"
-import { faClose, faPlay } from '@fortawesome/free-solid-svg-icons';
+
+import hallwayTwo from "../assets/hallway_1.avif"
+import { faArrowLeft, faArrowRight, faClose, faCross, faLocation, faPhone, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarDay } from '@fortawesome/free-solid-svg-icons/faCalendarDay';
 
 export default function Home() {
   const [screenWidth, setScreenWidth] = useState<any>(typeof window !== 'undefined' ? window.innerWidth : 1040)
@@ -29,6 +32,9 @@ export default function Home() {
   }, []);
 
   const [showVid, setShowVid] = useState(false)
+
+  const [currentSlide, setCurrentSlide] = useState(1)
+
   return (
     <>
      <div id='home_container' className='home w-screen h-fit flex flex-row justify-center items-center pb-4'>
@@ -66,10 +72,7 @@ export default function Home() {
 
          {showVid && <div className='absolute top-0 z-[120] w-full h-full'>
           <button className='absolute top-2 right-2 w-8 h-8 bg-black text-white z-[150] cursor-pointer shadow-xl shadow-black hover:shadow-none' onClick={() => setShowVid(false)}><FontAwesomeIcon icon={faClose} /></button>
-          <video className='w-full h-full object-cover' controls preload="none" loop muted>
-  <source src="https://drive.google.com/uc?export=download&id=1Vx2eCi13GXaHWvqrm5RiM4kESQo7N0Tx" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z4d4RuOgFjs?si=kxhb0ERHdLB5PUfK?mute=0" title="Oleander Physio Clinic" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
          </div>}
      <div id="how_it_works_video" className='absolute top-0 w-full h-full'>
@@ -89,7 +92,7 @@ export default function Home() {
           </button>
           </div>
         </div>
-        <div className='w-full h-fit flex flex-col justify-center items-center'>
+        <div className='w-[90%] h-fit flex flex-col justify-center items-center'>
         <h4 className='flex flex-col justify-center items-center text-black font-bold'>
           <span className='text-center'>Schedule your appointment today and embark on a health</span>  
           <span className='text-center'>journey where you are the hero. Your well-being starts with us.</span>
@@ -101,6 +104,84 @@ export default function Home() {
         </div>
       </div>
      </div>
+
+     {/* what we love to do */}
+
+     <div className='w-screen h-fit p-10'>
+      
+      <div id='advantages'>
+        <p className='text-[3em] font-bold'>
+          <span>We Care About</span><br/>
+          <span>Your</span><span className='text-[#237e5e]'> Families</span>
+        </p>
+        <div className='w-[40%] h-full flex flex-col justify-end pb-[30px] pl-[50px]'>
+          <p className='text-bottom break-words text-slate-600 font-semibold'>akdjf;kasjdf;kasdj;fkjsa;dkfja;skdfja;skdfj;aksdjf;alskdjf;aklsjd;flkajs;dlfkj</p>
+        </div>
+      </div>
+     
+      <div id='advantages_list' className='mt-[50px] w-full h-fit flex justify-evenly'>
+        <div className='w-fit h-fit flex flex-col mt-[50px]'>
+          <p className='font-bold text-[1.5em] text-[#237e5e]'>Our Advantages</p>
+          <ul className='m-2'>
+            <li className='m-[20px] flex justify-start items-center font-bold'>
+              <FontAwesomeIcon icon={faCalendarDays} className='bg-[#237e5e3d] p-3 text-[#237e5e] rounded-md mr-2' /> Make an appointment
+            </li>
+            <li className='m-[20px] flex justify-start items-center font-bold'>
+              <FontAwesomeIcon icon={faLifeRing} className='bg-[#237e5e3d] p-3 text-[#237e5e] rounded-md mr-2'/> Digital x-ray on site
+            </li>
+            <li className='m-[20px] flex justify-start items-center font-bold'>
+              <FontAwesomeIcon icon={faClock} className='bg-[#237e5e3d] p-3 text-[#237e5e] rounded-md mr-2'/> Emergency services
+            </li>
+            <li className='m-[20px] flex justify-start items-center font-bold'>
+              <FontAwesomeIcon icon={faCross} className='bg-[#237e5e3d] p-3 text-[#237e5e] rounded-md mr-2'/> Immunizations
+            </li>
+          </ul>
+        </div>
+        <div className='flex relative w-1/2'>
+          <Image className="w-[100%] object-fill shadow-2xl shadow-[#68e3b8bd]" src={hallwayTwo} alt='group-photo' />
+          <div className='absolute bottom-[-20px] right-[-20px] bg-[#29bc88] w-[320px] p-5'>
+            <p className='text-white flex justify-start items-center'><FontAwesomeIcon className='mr-2' icon={faPhone} />(330) 718-8699</p>
+            <p className='text-white flex justify-start items-center'><FontAwesomeIcon className='mr-2' icon={faLocation} />65 Commings Dr Walton, KY</p>
+        </div>
+        </div>
+      </div>
+     </div>
+
+
+
+     {/* content slider */}
+
+    <div className='w-screen h-[750px]  relative'>
+      <div className='w-full h-full'>
+        <Image className='w-full h-full' src={hallway} alt='hero-img' />
+      </div>
+      <div className='w-full h-3/4 absolute bottom-0 z-10 p-10 flex justify-start'>
+        <div className='w-fit h-[90%] bg-[#585858]'>
+          <div onClick={() => setCurrentSlide(1)} className={currentSlide===1?`w-[4px] transition-all h-1/3 ml-[-1px] bg-[#e6e6e6]`:`h-1/3 bg-[#585858]`}></div>
+          <div onClick={() => setCurrentSlide(2)} className={currentSlide===2?`w-[4px] transition-all h-1/3 ml-[-1px] bg-[#e6e6e6]`:`h-1/3 bg-[#585858]`}></div>
+          <div onClick={() => setCurrentSlide(3)} className={currentSlide===3?`w-[4px] transition-all h-1/3 ml-[-1px] bg-[#e6e6e6]`:`h-1/3 bg-[#585858]`}></div>
+        </div>
+        <div className='w-full h-[90%] flex flex-col justify-end pl-10'>
+        <h1><span>02</span><span>/</span><span>10</span></h1>
+        <div className='w-full overflow-hidden'>
+        <h1>Healthcare.</h1>
+          <h4 className='w-[90%] h-fit text-red-700 break-words'>sfdjbpiaons;didjbpiaons;difjaskdfjaskddjbpiaons;difjaskdlfj;alskdjf</h4>
+        </div>
+        <h1>Healthcare.</h1>
+         <div>
+            <button><FontAwesomeIcon className='text-white' icon={faArrowLeft} /></button>
+            <button><FontAwesomeIcon className='text-white' icon={faArrowRight} /></button>
+          </div>
+        </div>
+        {/* <div>
+         
+          
+         
+        </div> */}
+      </div>
+    </div>
+
+     {/* footer */}
     </>
   );
 }
