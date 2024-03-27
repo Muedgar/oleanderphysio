@@ -24,7 +24,7 @@ return(
             <div className="contacts">
                 <p className="cursor-pointer">
                     <span className="icon">
-                        <FontAwesomeIcon className='w-[20px] text-white' icon={faEnvelope} />
+                        <FontAwesomeIcon className='w-[20px] text-white' icon={faPhone} />
                     </span>
                     <span className="call_to_action">
                         <span>Call us anytime</span><span>07883999283</span>
@@ -32,7 +32,7 @@ return(
                 </p>
                 <p className="cursor-pointer">
                     <span className="icon">
-                        <FontAwesomeIcon className='w-[20px] text-white' icon={faPhone} />
+                        <FontAwesomeIcon className='w-[20px] text-white' icon={faEnvelope} />
                     </span>
                     <span className="call_to_action">
                         <span>Write a mail</span><span>neehhelp@info.com</span>
