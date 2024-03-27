@@ -1,0 +1,233 @@
+
+a {
+    text-decoration: none;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #22272b;
+    padding: 7.5px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner p {
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.banner div span {
+    color: white;
+    margin-right: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* responsive banner */
+@media (max-width: 971px) {
+    /* CSS rules here will apply to screens with a width of 971px or less */
+    
+    .banner div .banner-wide {
+        display: none;
+    }
+    .banner p {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .banner div span { 
+        font-size: 12px;        
+    }
+
+}
+
+.nav_clinic {
+    width: 100%;
+    height: 120px;
+}
+
+.nav_clinic_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_clinic_container .logo {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10%;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.nav_clinic_container .logo:hover {
+    opacity: .8;
+}
+
+.nav_clinic_container .logo span:nth-child(2) {
+    color: gray
+}
+
+.contacts {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contacts p {
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts button {
+    margin-right: 10%;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #024019;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin-right: 10%;
+    display: none;
+}
+/* .icon::after {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid black;
+} */
+
+.call_to_action {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+.call_to_action p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    
+}
+
+.call_to_action p:nth-child(1) {
+    color: gray;
+}
+
+.call_to_action p:nth-child(2):hover {
+    color: rgb(0, 131, 90);
+}
+
+.call_to_action_button {
+    background-color: rgb(0, 131, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0 20px 0 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+
+/* sub menu */
+.menu {
+    width: 80%;
+    height: 70px;
+    margin: auto;
+    border-top: 1px solid #b8b8b8;
+    border-bottom: 4px solid #c7dd00;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+
+.dropdown { 
+    display: block;
+}
+    .nav_clinic_container .logo {
+        font-size: 1.5em;
+    }
+    .menu {
+        display: none;
+    }
+    .contacts {
+        display: none;
+    }
+}
+/* .menu_item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    height: 100%;
+}
+
+.menu_item_level_1 {
+    height: 100%;
+    background: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+} */
+
+/* .menu_item_level_1_content {
+    width: fit-content;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    top:0px;
+    color: black;
+    background-color: black;
+    width: 200px;
+    height: fit-content;
+}
+
+.menu_item_level_2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+}
+
+.menu_item_level_2_content {
+    width: fit-content;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    left:-50px;
+    color: black;
+    background-color: #b8b8b8;
+} */

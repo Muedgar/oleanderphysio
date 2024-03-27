@@ -1,0 +1,27 @@
+.home {
+    background: linear-gradient(to right, rgb(236, 248, 250) 60%, rgb(38, 89, 96) 40%);
+    /* You can adjust the direction and color stops as needed */
+}
+#home_hide_content_1 {
+    display: flex;
+}
+#home_hide_content_2 {
+    display: none;
+}
+#home_container {
+    padding-left: 100px;
+}
+@media (max-width: 1000px) {
+    #home_container {
+        padding-left: 0;
+    }
+    .home_hide_doc {
+        display: none;
+    }
+    #home_hide_content_2 {
+        display: flex;
+    }
+    #home_hide_content_1 {
+        display: none;
+    }
+}
