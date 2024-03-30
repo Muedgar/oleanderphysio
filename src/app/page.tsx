@@ -35,6 +35,24 @@ export default function Home() {
 
   const [currentSlide, setCurrentSlide] = useState(1)
 
+  const [content, setContent] = useState<any>([])
+  useEffect(() => {
+    setContent([
+      {
+        title: 'Healthcare 1.',
+        content: 'sfdjbpiaons;didjbpiaons;difjaskdfjaskddjdjbpiaons;didjbpiaons;difjaskdfjaskddjbpiaons;difjaskdlfj;alskdj aons;didjbpiaons;difjaskdfjaskddjbpiaons;difjaskdlfj;alskdjf'
+      },
+      {
+        title: 'Healthcare 2.',
+        content: 'sfdjbpiaons;didjbpiaons;difjaskdfjaskddjdjbpiaons;didjbpiaons;difjaskdfjaskddjbpiaons;difjaskdlfj;alskdj aons;didjbpiaons;difjaskdfjaskddjbpiaons;difjaskdlfj;alskdjf'
+      },
+      {
+        title: 'Healthcare 3.',
+        content: 'sfdjbpiaons;didjbpiaons;difjaskdfjaskddjdjbpiaons;didjbpiaons;difjaskdfjaskddjbpiaons;difjaskdlfj;alskdj aons;didjbpiaons;difjaskdfjaskddjbpiaons;difjaskdlfj;alskdjf'
+      }
+    ]
+  )
+  },[])
   return (
     <>
      <div id='home_container' className='home w-screen h-fit flex flex-row justify-center items-center pb-4'>
@@ -153,35 +171,39 @@ export default function Home() {
 
     <div className='w-screen h-[750px]  relative'>
       <div className='w-full h-full'>
-        <Image className='w-full h-full' src={hallway} alt='hero-img' />
+        {currentSlide===1 && <Image className='w-full h-full' src={hallway} alt='hero-img' />}
+        {currentSlide===2 && <Image className='w-full h-full' src={hallwayTwo} alt='hero-img' />}
+        {currentSlide===3 && <Image className='w-full h-full' src={hallway} alt='hero-img' />}
       </div>
-      <div className='w-full h-3/4 absolute bottom-0 z-10 p-10 flex justify-start'>
+      <div id="content-slider" className='w-full h-full absolute bottom-0 z-10 p-10 flex justify-start'>
         <div className='w-fit h-[90%] bg-[#585858]'>
           <div onClick={() => setCurrentSlide(1)} className={currentSlide===1?`w-[4px] transition-all h-1/3 ml-[-1px] bg-[#e6e6e6]`:`h-1/3 bg-[#585858]`}></div>
           <div onClick={() => setCurrentSlide(2)} className={currentSlide===2?`w-[4px] transition-all h-1/3 ml-[-1px] bg-[#e6e6e6]`:`h-1/3 bg-[#585858]`}></div>
           <div onClick={() => setCurrentSlide(3)} className={currentSlide===3?`w-[4px] transition-all h-1/3 ml-[-1px] bg-[#e6e6e6]`:`h-1/3 bg-[#585858]`}></div>
         </div>
-        <div className='w-full h-[90%] flex flex-col justify-end pl-10'>
-        <h1><span>02</span><span>/</span><span>10</span></h1>
+        <div className='w-full h-[90%] flex flex-col justify-end mt-[-5%] pl-10'>
+        <h1 className='text-white'><span className='text-[2em]'>{currentSlide}</span><span className='text-[1.5em] text-[#b9b9b9]'>/</span><span className='text-[1.5em] text-[#b9b9b9]'>3</span></h1>
         <div className='w-full overflow-hidden'>
-        <h1>Healthcare.</h1>
-          <h4 className='w-[90%] h-fit text-red-700 break-words'>sfdjbpiaons;didjbpiaons;difjaskdfjaskddjbpiaons;difjaskdlfj;alskdjf</h4>
+        <h1 className='text-[2em] font-bold text-white'>{content[currentSlide-1]?.title}</h1>
+        <p className='w-[60%] h-fit text-[#dedede] break-words text-sm'>{content[currentSlide-1]?.content}</p>
         </div>
-        <h1>Healthcare.</h1>
-         <div>
-            <button><FontAwesomeIcon className='text-white' icon={faArrowLeft} /></button>
-            <button><FontAwesomeIcon className='text-white' icon={faArrowRight} /></button>
+         <div className='mt-[20px]'>
+            <button onClick={() =>{
+              if(currentSlide>1) {
+                setCurrentSlide(currentSlide - 1)
+              }
+            }}><FontAwesomeIcon className='text-white border border-white p-4 rounded-[50%] hover:bg-white hover:text-black' icon={faArrowLeft} /></button>
+            <button onClick={() =>{
+              if(currentSlide<3) {
+                setCurrentSlide(currentSlide + 1)
+              }
+            }}><FontAwesomeIcon className='text-white border border-white p-4 rounded-[50%] ml-2 hover:bg-white hover:text-black' icon={faArrowRight} /></button>
           </div>
         </div>
-        {/* <div>
-         
-          
-         
-        </div> */}
       </div>
     </div>
 
-     {/* footer */}
+     
     </>
   );
 }
