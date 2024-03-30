@@ -1,0 +1,45 @@
+@media (max-width: 1000px) {
+    .foundation div:nth-child(1) p {
+        width: 100%;
+        margin-left: 10px;
+    }
+    .foundation_about div:nth-child(1) {
+        width: 90%;
+        left: 10px;
+        overflow: hidden;
+        height: fit-content;
+    }
+    .foundation_about div:nth-child(1) p:nth-child(1) {
+        font-size: 1.5em;
+    }
+    .foundation_about div:nth-child(1) p:nth-child(2) {
+        font-size: 1em;
+        word-break: break-all;
+        width: 80%;
+        font-weight: 400;
+    }
+
+
+
+    .foundation_mission div:nth-child(1) {
+        display: none;
+    }
+    .foundation_mission div:nth-child(2) {
+        width: 90%;
+        left: 10px;
+        overflow: hidden;
+        height: fit-content;
+    }
+    .foundation_mission div:nth-child(2) p:nth-child(1) {
+        font-size: 1.5em;
+    }
+    .foundation_mission div:nth-child(2) p:nth-child(2) {
+        font-size: 1em;
+        word-break: break-all;
+        width: 80%;
+        font-weight: 400;
+    }
+    .values {
+        width: 80%;
+    }
+}
