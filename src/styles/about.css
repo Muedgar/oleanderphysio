@@ -1,0 +1,33 @@
+@media (max-width: 1000px) {
+    .about div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .about div:nth-child(1) div:nth-child(1) {
+        width: 90%;
+    }
+    .about div:nth-child(1) div:nth-child(2) img {
+        width: 350px;
+        height: 400px; 
+    }
+    .about div:nth-child(1) div:nth-child(2) {
+        height: fit-content;
+    }
+    .about div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .our_team  {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .our_team div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

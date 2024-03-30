@@ -48,6 +48,7 @@ return(
     <ul className="menu">
         <TransitionLink href="/" label="Home"/>
         <TransitionLink href="/about" label="About"/>
+        <TransitionLink href="/foundation" label="Foundation"/>
         <TransitionLink href="/services" label="Services"/>
         <TransitionLink href="/contact" label="Contact"/>
     </ul>
