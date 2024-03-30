@@ -13,7 +13,7 @@ export default function Foundation() {
         <div className="w-full h-fit">
               <Image src={hall} alt="hallway" className="w-full h-[400px] object-fill" />
         </div>
-        <div className="w-full h-[600px] relative">
+        <div className="foundation_about w-full h-[600px] relative">
             <div className="w-1/2 h-[400px] bg-green-400 absolute left-20 top-[-150px] rounded-[20px] shadow-lg">
                 <p className="text-slate-800 text-[3em] font-regular m-4">About Foundation</p>
                 <p className="w-[80%] break-words font-thin text-[1.5em] m-4">asdfjaskdfjoviamsvd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaija;oisdjvniaow;enfvp;aosndgfvpaoindvnqwo;efn;asidjfnvasdf</p>
@@ -21,7 +21,7 @@ export default function Foundation() {
             </div>
         </div>
 
-        <div className="w-full h-fit relative">
+        <div className="foundation_mission w-full h-fit relative">
             <div className="absolute left-[200px] top-[-100px] w-[200px] h-[200px] border border-black rounded-[50%] flex justify-center items-center p-4">
                 <p className="text-[1.5em] font-thin m-1">Scroll Down</p>
                 <FontAwesomeIcon className="text-[1.5em] animate animate-bounce" icon={faArrowDown} />
@@ -33,9 +33,22 @@ export default function Foundation() {
             </div>
         </div>      
 
-        <div className="w-full h-[fit] flex flex-col justify-center items-center mt-[250px]">
-            <p>Our Values</p>
-            
+        <div className="w-full h-fit flex flex-col justify-center items-center mt-[250px]">
+            <p className="text-2xl text-slate-800">Our Values</p>
+            <div className="w-full h-fit flex flex-col justify-center items-center">
+                <div className="values mt-4 mb-4 w-[50%] h-fit  bg-slate-200 p-2 rounded-[20px]">
+                    <h5 className="font-bold p-5">User Friendly</h5>
+                    <p className="break-words p-5">sdfjaskdfjoviamsvd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoiv</p>
+                </div>
+                <div className="values mt-4 mb-4 w-[50%] h-fit  bg-slate-200 p-2 rounded-[20px]">
+                    <h5 className="font-bold p-5">User Friendly</h5>
+                    <p className="break-words p-5">sdfjaskdfjoviamsvd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoiv</p>
+                </div>
+                <div className="values mt-4 mb-4 w-[50%] h-fit  bg-slate-200 p-2 rounded-[20px]">
+                    <h5 className="font-bold p-5">User Friendly</h5>
+                    <p className="break-words p-5">sdfjaskdfjoviamsvd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoivquenrpubqnwe;ofiaijavd;kasdjoiv</p>
+                </div>
+            </div>
         </div>  
         </div>
     )
